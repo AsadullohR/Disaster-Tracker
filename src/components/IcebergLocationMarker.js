@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import icebergLocationIcon from "@iconify/icons-openmoji/iceberg";
 
-const IcebergLocationMarker = ({ lat, lng, onClick }) => {
+const IcebergLocationMarker = ({ onClick }) => {
   return (
     <div className="location-marker" onClick={onClick}>
       <Icon icon={icebergLocationIcon} className="location-icon iceberg-icon" />
