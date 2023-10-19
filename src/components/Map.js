@@ -85,7 +85,7 @@ const Map = ({ eventData, center, zoom }) => {
   return (
     <div className="map">
       <GoogleMapReact
-        apiKey="AIzaSyCqq1z2LN-2XGMkca1mAZPGBxfr3O_IICk"
+        apiKey={process.env.GOOGLE_MAP_API_KEY}
         defaultCenter={center}
         defaultZoom={zoom}
       >
