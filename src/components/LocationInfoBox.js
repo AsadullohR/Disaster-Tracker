@@ -18,7 +18,12 @@ const LocationInfoBox = ({ info }) => {
           <strong>{info.last_updated}</strong>
         </li>
         <li className="info-sources">
-          <a className="info-source-link" href={info.sources} target="_blank">
+          <a
+            className="info-source-link"
+            href={info.sources}
+            target="_blank"
+            rel="noreferrer"
+          >
             Source
           </a>
         </li>
