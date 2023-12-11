@@ -4,7 +4,7 @@ body {
 }
 
 .header{
-  padding: 10px;
+  padding: 0.5rem;
   background-color: firebrick;
   color: #fff;
   position: fixed;
@@ -12,19 +12,21 @@ body {
   right: 0;
   left: 0;
   z-index: 100;
+  position: absolute;
 }
 .header h1{
-  font-size: 25px;
+  font-size: 20px;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
 .map{
-  height: 100vh;
+  height: 98vh;
   width: 100vw;
-  position: absolute;
-  top: 2rem;
+  position: relative;
+  top: 2.5rem;
+  bottom: 0;
 }
 
 .location-icon{
@@ -38,6 +40,8 @@ body {
 }
 .storm-icon{
   color: azure;
+  width: 3rem;
+  height: 3rem;
 }
 
 .loader{
@@ -67,6 +71,56 @@ body {
   border-radius: 10px;
   font-size: 18px;
   color: #fff;
+}
+
+.info-id p{
+  background-color: blue;
+  border-radius: 8px;
+  padding: 0.3rem;
+  display: inline-block;
+  margin: 0;
+  margin-right: 0.2rem;
+  box-shadow: -5px 5px 12px 8px rgba(76, 79, 141, 0.6);
+}
+
+.info-title p{
+  background-color: yellowgreen;
+  border-radius: 8px;
+  padding: 0.3rem;
+  display: inline-block;
+  margin: 0;
+  margin-right: 0.2rem;
+  box-shadow: -5px 5px 12px 8px rgba(98, 141, 76, 0.6);
+}
+
+.info-last_updated p{
+  background-color: rgb(2, 131, 41);
+  border-radius: 8px;
+  padding: 0.3rem;
+  display: inline-block;
+  margin: 0;
+  margin-right: 0.2rem;
+  box-shadow: -5px 5px 12px 8px rgba(0, 255, 13, 0.1);
+}
+
+.info-sources{
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 80%;
+}
+
+.info-source-link{
+  text-decoration: none;
+  color: #fff;
+  background-color: firebrick;
+  padding: 0.3rem;
+  border-radius: 8px;
+  box-shadow: -5px 5px 12px 8px rgba(255, 0, 0, 0.2);
+  transition: font-size 0.5s;
+}
+
+.info-source-link:hover{
+  font-size:larger;
 }
 
 .location-info ul{

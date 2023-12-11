@@ -5,11 +5,22 @@ const LocationInfoBox = ({ info }) => {
     <div className="location-info">
       <h2>Event Location Info</h2>
       <ul>
-        <li>
-          ID: <strong>{info.id}</strong>
+        <li className="info-id">
+          <p>ID:</p>
+          <strong>{info.id}</strong>
         </li>
-        <li>
-          TITLE: <strong>{info.title}</strong>
+        <li className="info-title">
+          <p>Title:</p>
+          <strong>{info.title}</strong>
+        </li>
+        <li className="info-last_updated">
+          <p>Last Updated:</p>
+          <strong>{info.last_updated}</strong>
+        </li>
+        <li className="info-sources">
+          <a className="info-source-link" href={info.sources} target="_blank">
+            Source
+          </a>
         </li>
       </ul>
     </div>

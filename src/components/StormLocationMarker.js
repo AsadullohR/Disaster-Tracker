@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import StormLocationIcon from "@iconify/icons-mdi/storm";
+import StormLocationIcon from "@iconify/icons-mdi/dust-storm";
 
 const StormLocationMarker = ({ onClick }) => {
   return (

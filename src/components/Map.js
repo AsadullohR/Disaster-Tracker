@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 // import GoogleMapReact from "google-map-react";
 import GoogleMapReact from "google-maps-react-markers";
-
+import moment from "moment";
 import FireLocationMarker from "./FireLocationMarker";
 import VolcanoLocationMarker from "./VolcanoLocationMarker";
 import StormLocationMarker from "./StormLocationMarker";
@@ -26,7 +26,14 @@ const Map = ({ eventData, center, zoom }) => {
           lat={ev.geometries[0].coordinates[1]}
           lng={ev.geometries[0].coordinates[0]}
           onClick={() => {
-            setLocationInfo({ id: ev.id, title: ev.title });
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              last_updated: moment(ev.geometries[ev.geometries.length - 1].date)
+                .utc()
+                .format("MMMM Do YYYY, h:mm:ss a"),
+              sources: ev.sources[0].url,
+            });
           }}
         />
       );
@@ -42,7 +49,14 @@ const Map = ({ eventData, center, zoom }) => {
           lat={ev.geometries[0].coordinates[1]}
           lng={ev.geometries[0].coordinates[0]}
           onClick={() => {
-            setLocationInfo({ id: ev.id, title: ev.title });
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              last_updated: moment(ev.geometries[ev.geometries.length - 1].date)
+                .utc()
+                .format("MMMM Do YYYY, h:mm:ss a"),
+              sources: ev.sources[0].url,
+            });
           }}
         />
       );
@@ -58,7 +72,14 @@ const Map = ({ eventData, center, zoom }) => {
           lat={ev.geometries[0].coordinates[1]}
           lng={ev.geometries[0].coordinates[0]}
           onClick={() => {
-            setLocationInfo({ id: ev.id, title: ev.title });
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              last_updated: moment(ev.geometries[ev.geometries.length - 1].date)
+                .utc()
+                .format("MMMM Do YYYY, h:mm:ss a"),
+              sources: ev.sources[0].url,
+            });
           }}
         />
       );
@@ -74,7 +95,14 @@ const Map = ({ eventData, center, zoom }) => {
           lat={ev.geometries[0].coordinates[1]}
           lng={ev.geometries[0].coordinates[0]}
           onClick={() => {
-            setLocationInfo({ id: ev.id, title: ev.title });
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              last_updated: moment(ev.geometries[ev.geometries.length - 1].date)
+                .utc()
+                .format("MMMM Do YYYY, h:mm:ss a"),
+              sources: ev.sources[0].url,
+            });
           }}
         />
       );
@@ -85,7 +113,7 @@ const Map = ({ eventData, center, zoom }) => {
   return (
     <div className="map">
       <GoogleMapReact
-        apiKey={process.env.GOOGLE_MAP_API_KEY}
+        apiKey="AIzaSyCqq1z2LN-2XGMkca1mAZPGBxfr3O_IICk"
         defaultCenter={center}
         defaultZoom={zoom}
       >

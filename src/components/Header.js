@@ -6,7 +6,7 @@ const Header = () => {
     <div className="header">
       <h1>
         <Icon icon={fireLocationIcon} />
-        Disaster Tracker (Powered by NASA)
+        Global Disaster Tracker (Powered by NASA)
       </h1>
     </div>
   );
